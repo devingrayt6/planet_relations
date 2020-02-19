@@ -1,12 +1,14 @@
 import mongoose from "mongoose";
 const Schema = mongoose.Schema;
+const ObjectId = mongoose.Schema.Types.ObjectId;
 
-const Value = new Schema(
+const Galaxy = new Schema(
   {
     title: { type: String, required: true },
-    description: { type: String, required: true }
+    description: { type: String, required: true },
+
   },
   { timestamps: true, toJSON: { virtuals: true } }
 );
 
-export default Value;
+export default Galaxy;

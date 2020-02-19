@@ -1,7 +1,7 @@
 import express from "express";
-import valueService from "../services/ValueService";
+import GalaxyService from "../services/GalaxyService";
 
-export default class ValueController {
+export default class GalaxyController {
   constructor() {
     this.router = express
       .Router()
@@ -11,7 +11,7 @@ export default class ValueController {
 
   async getAll(req, res, next) {
     try {
-      let data = await valueService.getAll();
+      let data = await GalaxyService.getAll();
       return res.send(data);
     } catch (error) {
       next(error);
